@@ -17,7 +17,7 @@ if __name__ == '__main__':
     clean_train_reviews = []
 
     # Loop over each review; create an index i that goes from 0 to the length
-    # of the movie review list
+    # of the restaurant review list
 
     print ("Cleaning and parsing the training set movie reviews...\n")
     for i in range( 0, len(train["review"])):
