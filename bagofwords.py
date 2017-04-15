@@ -19,7 +19,7 @@ if __name__ == '__main__':
     # Loop over each review; create an index i that goes from 0 to the length
     # of the restaurant review list
 
-    print ("Cleaning and parsing the training set movie reviews...\n")
+    print ("Cleaning and parsing the training set restaurant reviews...\n")
     for i in range( 0, len(train["review"])):
         clean_train_reviews.append(" ".join(KaggleWord2VecUtility.review_to_wordlist(train["review"][i], True)))
 
@@ -52,7 +52,7 @@ if __name__ == '__main__':
 
 
     # Initialize a Random Forest classifier with 100 trees
-    forest = RandomForestClassifier(n_estimators = 200)
+    forest = RandomForestClassifier(n_estimators = 100)
 
     # Fit the forest to the training set, using the bag of words as
     # features and the sentiment labels as the response variable
@@ -65,7 +65,7 @@ if __name__ == '__main__':
     # Create an empty list and append the clean reviews one by one
     clean_test_reviews = []
 
-    print ("Cleaning and parsing the test set movie reviews...\n")
+    print ("Cleaning and parsing the test set restaurant reviews...\n")
     for i in range(0,len(test["review"])):
         clean_test_reviews.append(" ".join(KaggleWord2VecUtility.review_to_wordlist(test["review"][i], True)))
 
